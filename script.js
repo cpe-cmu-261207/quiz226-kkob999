@@ -6,7 +6,7 @@ const color = document.querySelector('#color')
 const reset_btn = document.querySelector('#reset')
 const search_btn = document.querySelector('#search')
 const text = document.querySelector('#text')
-var original = text.innerHTML
+let original = text.innerHTML
 
 // define more constants and variables here
 
@@ -29,9 +29,11 @@ search_btn.onclick = () => {
   word = original.split(' ');
   for (let i = 0; i < word.length; i++) {
     if (word[i].length > length.value) {
-      newPara += "<span style = ' color: " + color.value + "'>" + word[i] + "</span>" + " "
+      newPara += "<span style = ' color: " + color.value + "'>" + word[i] + "</span>" + " ";
+    }else{
+      newPara += word[i] + " ";
     }
-    
+    text.innerHTML = newPara
   }
 }
 
