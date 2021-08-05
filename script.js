@@ -27,8 +27,8 @@ let word = []
 search_btn.onclick = () => {
   let newPara = ''
   word = original.split(' ');
-  for (let i = 0; i < word.length; i++) {
-    if (word[i].length > length.value) {
+  for (let i = 0; i <= word.length; i++) {
+    if (word[i].length >= length.value) {
       newPara += "<span style = ' color: " + color.value + "'>" + word[i] + "</span>" + " ";
     }else{
       newPara += word[i] + " ";
